@@ -19,15 +19,14 @@ namespace WordCounter.Models
       }
       return count;
     }
-    
+
     public static void Main()
     {
       Console.WriteLine("Please enter a Word that you want to count in a sentence:");
       string userInputword = Console.ReadLine();
       Console.WriteLine("Please enter a sentence:");
       string userInputSentence = Console.ReadLine();
-      Console.WriteLine("The word "+ "'"+userInputword +"'"+" appered "+ RepeatCounter(userInputword.ToUpper(),userInputSentence.ToUpper())+" times.");
+      Console.WriteLine("The word " + "'" + userInputword + "'" + " appered " + RepeatCounter(userInputword.ToUpper(),userInputSentence.ToUpper()) + " times.");
     }
-
   }
 }
