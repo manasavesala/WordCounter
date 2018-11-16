@@ -7,9 +7,10 @@ namespace WordCounter.Models
   public static class WordCounter
   {
     public static int RepeatCounter(string word, string sentence)
-    {
+    { 
       int count = 0;
       string[] sentenceWords = sentence.Split();
+
       for(int i = 0; i < sentenceWords.Length; i++)
       {
         if(word == sentenceWords[i])

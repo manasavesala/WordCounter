@@ -46,5 +46,19 @@ namespace WordCounter.Tests
       //Assert
       Assert.AreEqual(result, WordCounter.Models.WordCounter.RepeatCounter(word,sentence));
     }
+
+    [TestMethod]
+    public void RepeatCounterMethod_ForFour_Words()
+    { 
+      //Arrange
+      string word = "the";
+      string sentence = "the The THe thE .";
+
+      //Act
+      int result = WordCounter.Models.WordCounter.RepeatCounter(word,sentence);
+
+      //Assert
+      Assert.AreEqual(result, WordCounter.Models.WordCounter.RepeatCounter(word,sentence));
+    }
   }
 }
