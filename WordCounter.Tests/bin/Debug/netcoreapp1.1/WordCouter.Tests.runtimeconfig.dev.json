@@ -1,0 +1,9 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Murali Medisetty\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Murali Medisetty\\.nuget\\packages",
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback"
+    ]
+  }
+}
