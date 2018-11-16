@@ -60,5 +60,19 @@ namespace WordCounter.Tests
       //Assert
       Assert.AreEqual(result, WordCounter.Models.WordCounter.RepeatCounter(word,sentence));
     }
+
+    [TestMethod]
+    public void RepeatCounterMethod_ForNoSentence()
+    { 
+      //Arrange
+      string word = "the";
+      string sentence = "";
+
+      //Act
+      int result = WordCounter.Models.WordCounter.RepeatCounter(word,sentence);
+
+      //Assert
+      Assert.AreEqual(result, WordCounter.Models.WordCounter.RepeatCounter(word,sentence));
+    }
   }
 }
