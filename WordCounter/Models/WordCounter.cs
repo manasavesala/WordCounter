@@ -18,6 +18,7 @@ namespace WordCounter.Models
           count = count + 1;
         }
       }
+      
       if(count == 0)
       {
         Console.WriteLine("No Match Found.");

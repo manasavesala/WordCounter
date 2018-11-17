@@ -35,6 +35,7 @@ _A C# application that gathers both a word and sentence from a user, then checks
 ## Setup/Installation Requirements
 
 * _Clone this repository_
+    _https://github.com/manasavesala/WordCounter.git_
 * _Install Mono and .NET Framework_
 * _Open the folder and run Program.exe in Mono_
 * _Follow command prompts in Terminal_
