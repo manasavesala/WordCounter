@@ -33,21 +33,16 @@ namespace WordCounterMVC.Tests
             IActionResult view = controller.Output("cat","my cat");
 
             //Assert
-            Assert.IsInstanceOfType(view, typeof(RedirectToActionResult));
+            Assert.IsInstanceOfType(view, typeof(ViewResult));
+            var viewResult = view as ViewResult;
+
+            Assert.IsInstanceOfType(viewResult.Model, typeof(WordCounter));
+            var model = viewResult.Model as WordCounter;
+            
+            Assert.AreEqual(model.GetWord(), "cat");
+            Assert.AreEqual(model.GetSentence(), "my cat");
+
         }
 
-        // [TestMethod]
-        // public void Create_RedirectsToCorrectAction_Index()
-        // {
-        //     //Arrange
-        //     WordCounterController controller = new WordCounterController();
-        //     RedirectToActionResult actionResult = controller.Create("dog","Walk the dog") as RedirectToActionResult;
-
-        //     //Act
-        //     string result = actionResult.ActionName;
-
-        //     //Assert
-        //     Assert.AreEqual(result, "Index");
-        // }
     }
 }

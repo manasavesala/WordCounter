@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>output</title>
+    <title>Hello Friend!</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
   </head>
   <body>
     <p>Here are your results</p>
     <p>Word Entered: @Model.GetWord()</p>
-    <p>Word Appered in Sentence: @Model.GetRepeatCounter()</p><br>
+    <p>Anagram Words:</p>
+    <ul>
+      @foreach (string result in Model.GetAnagrams())
+      {
+        <li>@result</li>
+      }
+    </ul><br>
     <p><a href="/">Go to Main page</p>
   </body>
 </html>

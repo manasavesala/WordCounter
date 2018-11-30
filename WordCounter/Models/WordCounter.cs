@@ -24,7 +24,7 @@ namespace WordCounterMVC.Models
       _word = newWord;
     }
 
-    public string Getsentence()
+    public string GetSentence()
     {
       return _sentence;
     }
