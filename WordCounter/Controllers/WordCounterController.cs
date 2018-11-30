@@ -4,7 +4,7 @@ using WordCounterMVC.Models;
 
 namespace WordCounterMVC.Controllers
 {
-  public class WordController : Controller
+  public class WordCounterController : Controller
   {
 
     [HttpGet("/wordcounter")]
@@ -16,7 +16,7 @@ namespace WordCounterMVC.Controllers
     [HttpPost("/wordcounter/output")]
     public ActionResult Output(string word, string sentence)
     {
-      WordCounter myCountVariable = new WordCounter();
+      WordCounter myCountVariable = new WordCounter(word,sentence);
       myCountVariable.SetWord(word);
       myCountVariable.SetSentence(sentence);
       return View(myCountVariable);

@@ -9,6 +9,11 @@ namespace WordCounterMVC.Models
     private string _word;
     private string _sentence;
 
+    public WordCounter(string word, string sentence){
+      _word = word;
+      _sentence = sentence.ToLower();
+    }
+
     public string GetWord()
     {
       return _word;

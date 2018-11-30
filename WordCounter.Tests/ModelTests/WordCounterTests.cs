@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WordCounter.Models;
+using WordCounterMVC.Models;
 
-namespace WordCounter.Tests
+namespace WordCounterMVC.Tests
 {
   [TestClass]
   public class WordCounterTest
@@ -12,12 +12,13 @@ namespace WordCounter.Tests
     { 
       //Arrange
       string word = "manasa";
+      WordCounter word1 = new WordCounter(word,word);
 
       //Act
-      int result = WordCounter.Models.WordCounter.GetRepeatCounter(word,word);
+      int result = word1.GetRepeatCounter();
 
       //Assert
-      Assert.AreEqual(result, WordCounter.Models.WordCounter.GetRepeatCounter(word,word));
+      Assert.AreEqual(1, result);
     }
 
     [TestMethod]
@@ -26,26 +27,27 @@ namespace WordCounter.Tests
       //Arrange
       string word = "cat";
       string sentence = "I am walking my cat to the cathedral.I love my cat .";
+      WordCounter word1 = new WordCounter(word,sentence);
 
       //Act
-      int result = WordCounter.Models.WordCounter.GetRepeatCounter(word,sentence);
+      int result = word1.GetRepeatCounter();
 
       //Assert
-      Assert.AreEqual(result, WordCounter.Models.WordCounter.GetRepeatCounter(word,sentence));
+      Assert.AreEqual(2, result);
     }
 
     [TestMethod]
-    public void GetRepeatCounterMethod_ForOne_capitalletter()
+    public void GetWord()
     { 
       //Arrange
       string word = "cat";
-      string sentence = "I am walking my cat to the cathedral.I love my CAT .";
+      WordCounter word1 = new WordCounter(word,word);
 
       //Act
-      int result = WordCounter.Models.WordCounter.GetRepeatCounter(word,sentence);
+      string result = word1.GetWord();
 
       //Assert
-      Assert.AreEqual(result, WordCounter.Models.WordCounter.GetRepeatCounter(word,sentence));
+      Assert.AreEqual(word, result);
     }
 
     [TestMethod]
@@ -54,12 +56,13 @@ namespace WordCounter.Tests
       //Arrange
       string word = "the";
       string sentence = "the The THe thE .";
+      WordCounter word1 = new WordCounter(word,sentence);
 
       //Act
-      int result = WordCounter.Models.WordCounter.GetRepeatCounter(word,sentence);
+      int result = word1.GetRepeatCounter();
 
       //Assert
-      Assert.AreEqual(result, WordCounter.Models.WordCounter.GetRepeatCounter(word,sentence));
+      Assert.AreEqual(4, result);
     }
 
     [TestMethod]
@@ -68,12 +71,13 @@ namespace WordCounter.Tests
       //Arrange
       string word = "the";
       string sentence = "";
+      WordCounter word1 = new WordCounter(word,sentence);
 
       //Act
-      int result = WordCounter.Models.WordCounter.GetRepeatCounter(word,sentence);
+      int result = word1.GetRepeatCounter();
 
       //Assert
-      Assert.AreEqual(result, WordCounter.Models.WordCounter.GetRepeatCounter(word,sentence));
+      Assert.AreEqual(0, result);
     }
   }
 }
