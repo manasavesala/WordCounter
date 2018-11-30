@@ -6,3 +6,5 @@ C:\Users\Murali Medisetty\Desktop\WordCounter.Solution\WordCounter\bin\Debug\net
 C:\Users\Murali Medisetty\Desktop\WordCounter.Solution\WordCounter\bin\Debug\netcoreapp1.1\WordCounter.pdb
 C:\Users\Murali Medisetty\Desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp1.1\WordCounter.dll
 C:\Users\Murali Medisetty\Desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp1.1\WordCounter.pdb
+C:\Users\Murali Medisetty\Desktop\WordCounter.Solution\WordCounter\bin\Debug\netcoreapp1.1\WordCounter.runtimeconfig.json
+C:\Users\Murali Medisetty\Desktop\WordCounter.Solution\WordCounter\bin\Debug\netcoreapp1.1\WordCounter.runtimeconfig.dev.json

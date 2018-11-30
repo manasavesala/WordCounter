@@ -1,0 +1,13 @@
+@using WordCounterMVC.Models;
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>output</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <body>
+    <p>Here are your results</p>
+    <p>Word Entered: @Model.GetWord()</p>
+    <p>Word Appered in Sentence: @Model.GetRepeatCounter()</p>
+  </body>
+</html>

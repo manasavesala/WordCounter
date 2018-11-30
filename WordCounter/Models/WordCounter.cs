@@ -2,18 +2,42 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace WordCounter.Models
+namespace WordCounterMVC.Models
 {
-  public static class WordCounter
+  public class WordCounter
   {
-    public static int RepeatCounter(string word, string sentence)
+    private string _word;
+    private string _sentence;
+
+    public string GetWord()
+    {
+      return _word;
+    }
+
+    public void SetWord(string newWord)
+    {
+      _word = newWord;
+    }
+
+    public string Getsentence()
+    {
+      return _sentence;
+    }
+
+    public void SetSentence(string newSentence)
+    {
+      _sentence = newSentence;
+    }
+
+    public int GetRepeatCounter()
     { 
+
       int count = 0;
-      string[] sentenceWords = sentence.Split();
+      string[] sentenceWords = _sentence.Split();
 
       for(int i = 0; i < sentenceWords.Length; i++)
       {
-        if(word == sentenceWords[i])
+        if(_word == sentenceWords[i])
         {
           count = count + 1;
         }
@@ -24,15 +48,6 @@ namespace WordCounter.Models
         Console.WriteLine("No Match Found.");
       }
       return count;
-    }
-
-    public static void Main()
-    {
-      Console.WriteLine("Please enter a Word that you want to count in a sentence:");
-      string userInputword = Console.ReadLine();
-      Console.WriteLine("Please enter a sentence:");
-      string userInputSentence = Console.ReadLine();
-      Console.WriteLine("The word " + "'" + userInputword + "'" + " appered " + RepeatCounter(userInputword.ToUpper(),userInputSentence.ToUpper()) + " times.");
     }
   }
 }
