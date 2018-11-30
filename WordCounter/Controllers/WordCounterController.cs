@@ -16,10 +16,10 @@ namespace WordCounterMVC.Controllers
     [HttpPost("/wordcounter/output")]
     public ActionResult Output(string word, string sentence)
     {
-      WordCounter myCountVariable = new WordCounter(word,sentence);
-      myCountVariable.SetWord(word);
-      myCountVariable.SetSentence(sentence);
-      return View(myCountVariable);
+      WordCounter myCountVariableModel = new WordCounter(word,sentence);
+      myCountVariableModel.SetWord(word);
+      myCountVariableModel.SetSentence(sentence);
+      return View(myCountVariableModel);
     }
   }
 }
