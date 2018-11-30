@@ -3,11 +3,16 @@
   <head>
     <title>output</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <style>
+      div{text-align: center;}
+    </style>
   </head>
   <body>
-    <p>Here are your results</p>
-    <p>Word Entered: @Model.GetWord()</p>
-    <p>Word Appered in Sentence: @Model.GetRepeatCounter()</p><br>
-    <p><a href="/">Go to Main page</p>
+    <div>
+      <h1>Here are your results:</h1>
+      <h3>Word Entered: @Model.GetWord()</h3>
+      <h3>Number of times the Word Appered in Sentence: @Model.GetRepeatCounter()</h3><br>
+      <h3><a href="/">Go to Main page</h3>
+    </div>
   </body>
 </html>

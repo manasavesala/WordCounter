@@ -3,17 +3,22 @@
   <head>
     <title>Hello Friend!</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <style>
+      div{text-align: center;}
+    </style>
   </head>
   <body>
-    <p>Here are your results</p>
-    <p>Word Entered: @Model.GetWord()</p>
-    <p>Anagram Words:</p>
-    <ul>
-      @foreach (string result in Model.GetAnagrams())
-      {
-        <li>@result</li>
-      }
-    </ul><br>
-    <p><a href="/">Go to Main page</p>
+    <div>
+      <h1>Here are your results</h1>
+      <h3>Word Entered: @Model.GetWord()</h3>
+      <h3>Anagram Words:</h3>
+      <ul>
+        @foreach (string result in Model.GetAnagrams())
+        {
+          <li>@result</li>
+        }
+      </ul><br>
+      <h3><a href="/">Go to Main page</h3>
+    </div>
   </body>
 </html>
