@@ -19,7 +19,7 @@ _For WordCounter_
 3. _Program counts the number of words in the given Sentence._
 4. _Program returns Repeatedcounter value depending on Word and Sentence inputs._
 5. _Program counts word "cat"._
-   * _Example Input: cat , "I am walking my cat and I love my cat ."_
+   * _Example Input: cat, "I am walking my cat and I love my cat ."_
    * _Example Outout: 2_
 6. _If word is not in sentence:_
    * _Example Input: the , "I am a Cat."_
@@ -31,7 +31,7 @@ _For Anagram_
    * _Example: "Enter your word:"_ 
    * _Example: "Enter some words:"_
 2. _Example Inputs_
-   * _Example Input: bread , "beard bread cat word"_
+   * _Example Input: bread, "beard bread cat word"_
    * _Example Outout: beard bread_
 
 ## Setup/Installation Requirements
@@ -43,6 +43,7 @@ _For Anagram_
 * _Then compile and execute: $ cd WordCounter/Models $ mcs WordCounter.cs; mono WordCounter.exe;_
 * _To run the program: $ cd WordCounter $ cd dotnet build $cd dotnet run_
 * _To run the tests, use these commands: $ cd WordCounter.Tests $ dotnet test_
+* _Navigate to localhost:5000 in your browser to view the splashpage._
 
 ## Support and contact details
 
